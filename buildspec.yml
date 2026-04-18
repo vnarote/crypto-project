@@ -10,7 +10,6 @@ phases:
 
   build:
     commands:
-        chunkSizeWarningLimit: 1600,
       - echo Building the React app...
       - npm run build
 
