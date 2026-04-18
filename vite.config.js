@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: './', // This ensures assets are loaded correctly on S3
   plugins: [react()],
+  base: './', // Add this line!
+  build: {
+    chunkSizeWarningLimit: 1600, // This hides that 500kb warning
+  }
 })
